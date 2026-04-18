@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUFU · DEMONS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <a href="#" class="logo" id="logo">
+                        <span class="logo-primary">YUFU</span>
+                        <span class="logo-secondary">DEMONS</span>
+                    </a>
+                </div>
+                
+                <nav class="header-nav">
+                    <a href="#" class="nav-link active" data-tab="home">Обзор</a>
+                    <a href="#" class="nav-link" data-tab="blood">Клятва</a>
+                    <a href="#" class="nav-link" data-tab="rankup">Повышение</a>
+                    <a href="#" class="nav-link" data-tab="places">Территории</a>
+                    <a href="#" class="nav-link" data-tab="fight">Дуэль Крови</a>
+                    <a href="#" class="nav-link" data-tab="break">Предел Крови</a>
+                    <a href="#" class="nav-link" data-tab="law">Закон Ковена</a>
+                </nav>
+                
+                <div class="header-right">
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="#" class="mobile-link active" data-tab="home">Обзор</a>
+                <a href="#" class="mobile-link" data-tab="blood">Клятва</a>
+                <a href="#" class="mobile-link" data-tab="rankup">Возвышение</a>
+                <a href="#" class="mobile-link" data-tab="places">Владения</a>
+                <a href="#" class="mobile-link" data-tab="fight">Поединки</a>
+                <a href="#" class="mobile-link" data-tab="break">Прорыв</a>
+                <a href="#" class="mobile-link" data-tab="law">Уложения</a>
+            </nav>
+        </div>
+
+        <main class="main">
+            <div class="main-container">
+                <div class="content-header">
+                    <h1 class="content-title" id="contentTitle">Обзор</h1>
+                    <div class="content-subtitle" id="contentSubtitle">Фракция демонов · Yufu.su</div>
+                </div>
+                <div class="content-body" id="contentBody"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>YUFU DEMONS</h4>
+                        <p>Фракция ночи · Официальный реестр</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Навигация</h4>
+                        <a href="#" data-tab="home">Обзор</a>
+                        <a href="#" data-tab="blood">Клятва</a>
+                        <a href="#" data-tab="places">Владения</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Создатель</h4>
+                        <p>Мудзан Кибуцуджи</p>
+                        <p>Discord: livgard</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Yufu.su · Все права защищены</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
