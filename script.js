@@ -143,7 +143,7 @@
                     .blood-section-title{
                         margin:0;
                         font-family:var(--font-display);
-                        font-size:1.45rem;
+                        font-size:1.62rem;
                         color:var(--text-primary);
                         display:flex;
                         align-items:center;
@@ -158,7 +158,7 @@
                         background:rgba(220,38,38,.12);
                         border:1px solid rgba(220,38,38,.24);
                         color:var(--text-secondary);
-                        font-size:.85rem;
+                        font-size:.9rem;
                     }
                     .blood-text-list{
                         display:flex;
@@ -174,7 +174,9 @@
                     .blood-rule p{
                         margin:0;
                         color:var(--text-primary);
-                        line-height:1.75;
+                        line-height:1.82;
+                        font-size:1.08rem;
+                        font-weight:700;
                     }
                     .blood-rule + .blood-note,
                     .blood-rule + .blood-exception,
@@ -185,10 +187,11 @@
                     .blood-note,
                     .blood-exception,
                     .blood-clarification{
-                        padding:14px 16px;
-                        border-radius:14px;
-                        line-height:1.7;
-                        font-size:.97rem;
+                        padding:10px 13px;
+                        border-radius:12px;
+                        line-height:1.58;
+                        font-size:.88rem;
+                        font-style:italic;
                     }
                     .blood-note{
                         background:rgba(255,255,255,.03);
@@ -221,6 +224,13 @@
                         display:block;
                         color:var(--text-primary);
                         margin-bottom:8px;
+                        font-size:1.02rem;
+                    }
+                    .blood-mini-card span{
+                        font-size:.98rem;
+                        line-height:1.7;
+                        color:var(--text-secondary);
+                        font-weight:600;
                     }
                     .punishment-tabs{
                         display:grid;
@@ -257,13 +267,15 @@
                     .punishment-pane h4{
                         margin:0 0 12px 0;
                         font-family:var(--font-display);
-                        font-size:1.2rem;
+                        font-size:1.25rem;
                         color:var(--text-primary);
                     }
                     .punishment-pane p{
                         margin:0 0 14px 0;
                         color:var(--text-secondary);
                         line-height:1.75;
+                        font-size:1rem;
+                        font-weight:600;
                     }
                     .issuer-list{
                         display:flex;
@@ -283,6 +295,9 @@
                         margin:18px 0 0;
                         background:linear-gradient(90deg, transparent 0%, rgba(220,38,38,.18) 50%, transparent 100%);
                     }
+                    .blood-main-title{
+                        font-size:1.52rem !important;
+                    }
                     @media (max-width: 768px){
                         .blood-section{
                             padding:18px;
@@ -292,6 +307,12 @@
                             min-height:52px;
                             font-size:.95rem;
                         }
+                        .blood-section-title{
+                            font-size:1.42rem;
+                        }
+                        .blood-rule p{
+                            font-size:1.02rem;
+                        }
                     }
                 </style>
 
@@ -299,134 +320,127 @@
                     <div class="section-title">Иерархия</div>
 
                     <div class="hierarchy-svg-wrapper">
-                        <svg class="hierarchy-svg" viewBox="0 0 900 780" preserveAspectRatio="xMidYMid meet">
-                            <!-- Прародитель → Высшие/Низшие -->
-                            <line x1="450" y1="55" x2="450" y2="85" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="225" y1="85" x2="675" y2="85" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="225" y1="85" x2="225" y2="115" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="675" y1="85" x2="675" y2="115" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+    <svg class="hierarchy-svg" viewBox="0 0 900 780" preserveAspectRatio="xMidYMid meet">
+        <!-- Прародитель -> Высшие Луны -->
+        <line x1="450" y1="55" x2="450" y2="85" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="85" x2="300" y2="85" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="300" y1="85" x2="300" y2="115" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <!-- Высшие/Низшие → Кровавая Элита -->
-                            <line x1="225" y1="155" x2="225" y2="180" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="675" y1="155" x2="675" y2="180" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="225" y1="180" x2="675" y2="180" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="180" x2="450" y2="210" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <!-- Прародитель -> Низшие Луны -->
+        <line x1="450" y1="85" x2="600" y2="85" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="600" y1="85" x2="600" y2="115" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <!-- Кровавая Элита → CMD | Константы | 5 Предел -->
-                            <line x1="450" y1="250" x2="450" y2="280" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="150" y1="280" x2="750" y2="280" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="150" y1="280" x2="150" y2="310" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="280" x2="450" y2="310" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="750" y1="280" x2="750" y2="310" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <!-- Высшие Луны -> Кровавая Элита -->
+        <line x1="300" y1="155" x2="300" y2="180" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="300" y1="180" x2="450" y2="180" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="180" x2="450" y2="210" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <!-- CMD | Константы | 5 Предел → D.CMD | Командиры | 4 Предел -->
-                            <line x1="150" y1="350" x2="150" y2="380" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="350" x2="450" y2="380" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="750" y1="350" x2="750" y2="380" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="150" y1="380" x2="750" y2="380" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="150" y1="380" x2="150" y2="410" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="380" x2="450" y2="410" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="750" y1="380" x2="750" y2="410" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <!-- Низшие Луны -> Кровавая Элита -->
+        <line x1="600" y1="155" x2="600" y2="180" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="600" y1="180" x2="450" y2="180" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <!-- D.CMD | Командиры | 4 Предел → Яхаба | Лунный мечник | Зам.Ком | 3 Предел | Сусамару -->
-                            <line x1="150" y1="450" x2="150" y2="480" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="450" x2="450" y2="480" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="750" y1="450" x2="750" y2="480" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="90" y1="480" x2="810" y2="480" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="90" y1="480" x2="90" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="270" y1="480" x2="270" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="480" x2="450" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="630" y1="480" x2="630" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="810" y1="480" x2="810" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <!-- Кровавая Элита -> CMD -->
+        <line x1="450" y1="250" x2="450" y2="280" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="280" x2="220" y2="280" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="220" y1="280" x2="220" y2="310" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <!-- 5 п → Лунный Аколит | Высшая Магия | 2 Предел -->
-                            <line x1="90" y1="550" x2="90" y2="580" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="270" y1="550" x2="270" y2="580" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="550" x2="450" y2="580" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="630" y1="550" x2="630" y2="580" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="810" y1="550" x2="810" y2="580" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="90" y1="580" x2="810" y2="580" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="225" y1="580" x2="225" y2="610" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="580" x2="450" y2="610" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="675" y1="580" x2="675" y2="610" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <!-- Кровавая Элита -> Константы -->
+        <line x1="450" y1="280" x2="450" y2="310" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <!-- 3 п → Низшая Магия | 1 Предел -->
-                            <line x1="225" y1="650" x2="225" y2="680" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="650" x2="450" y2="680" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="675" y1="650" x2="675" y2="680" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="225" y1="680" x2="675" y2="680" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="300" y1="680" x2="300" y2="710" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="600" y1="680" x2="600" y2="710" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <!-- Кровавая Элита -> 5 Предел -->
+        <line x1="450" y1="280" x2="680" y2="280" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="680" y1="280" x2="680" y2="310" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <!-- 2 п → Демоны 12 рангов -->
-                            <line x1="300" y1="750" x2="300" y2="770" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="600" y1="750" x2="600" y2="770" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="300" y1="770" x2="600" y2="770" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                            <line x1="450" y1="770" x2="450" y2="790" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
-                        </svg>
+        <!-- Левая ветка: CMD -> D.CMD -> Лунный мечник -> Лунный Аколит -->
+        <line x1="220" y1="350" x2="220" y2="410" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="220" y1="450" x2="220" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="220" y1="550" x2="220" y2="610" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                        <div class="hierarchy-nodes-absolute" style="height: 820px;">
-                            <div class="hierarchy-node hierarchy-node--primary" style="top: 10px; left: 450px;">
-                                <span class="hierarchy-name">Прародитель</span>
-                                <span class="hierarchy-sub">Мудзан Кибуцуджи</span>
-                            </div>
+        <!-- Центральная ветка: Константы -> Командиры -> Зам. Ком. -> Высшая Магия -> Низшая Магия -> Демоны 12 рангов -->
+        <line x1="450" y1="350" x2="450" y2="410" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="450" x2="450" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="550" x2="450" y2="610" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="650" x2="450" y2="710" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="750" x2="450" y2="790" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <div class="hierarchy-node hierarchy-node--secondary" style="top: 140px; left: 225px;">
-                                <span class="hierarchy-name">Высшие Луны</span>
-                                <span class="hierarchy-sub">Верхняя Шестёрка</span>
-                            </div>
-                            <div class="hierarchy-node hierarchy-node--secondary" style="top: 140px; left: 675px;">
-                                <span class="hierarchy-name">Низшие Луны</span>
-                                <span class="hierarchy-sub">Нижняя Шестёрка</span>
-                            </div>
+        <!-- Правая ветка: 5 Предел -> 4 -> 3 -> 2 -> 1 -->
+        <line x1="680" y1="350" x2="680" y2="410" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="680" y1="450" x2="680" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="680" y1="550" x2="680" y2="610" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="680" y1="650" x2="680" y2="710" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <div class="hierarchy-node hierarchy-node--tertiary" style="top: 245px; left: 450px;">
-                                <span class="hierarchy-name">Кровавая Элита</span>
-                            </div>
+        <!-- Боковая линия слева: Прародитель -> Яхаба -->
+        <line x1="70" y1="55" x2="70" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="55" x2="70" y2="55" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="70" y1="510" x2="70" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
 
-                            <div class="hierarchy-node hierarchy-node--quaternary" style="top: 335px; left: 150px;">
-                                <span class="hierarchy-name">CMD</span>
-                                <span class="hierarchy-sub">Лунный Сенсей</span>
-                            </div>
-                            <div class="hierarchy-node hierarchy-node--quaternary" style="top: 345px; left: 450px;">
-                                <span class="hierarchy-name">Константы</span>
-                            </div>
-                            <div class="hierarchy-node hierarchy-node--quaternary" style="top: 345px; left: 750px;">
-                                <span class="hierarchy-name">5 Предел</span>
-                            </div>
+        <!-- Боковая линия справа: Прародитель -> Сусамару -->
+        <line x1="830" y1="55" x2="830" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="450" y1="55" x2="830" y2="55" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+        <line x1="830" y1="510" x2="830" y2="510" stroke="#dc2626" stroke-width="2" opacity="0.6"/>
+    </svg>
 
-                            <div class="hierarchy-node hierarchy-node--quaternary" style="top: 435px; left: 150px;">
-                                <span class="hierarchy-name">D.CMD</span>
-                                <span class="hierarchy-sub">Лунный Сенсей</span>
-                            </div>
-                            <div class="hierarchy-node hierarchy-node--quaternary" style="top: 435px; left: 450px;">
-                                <span class="hierarchy-name">Командиры</span>
-                                <span class="hierarchy-sub">Отрядов</span>
-                            </div>
-                            <div class="hierarchy-node hierarchy-node--quaternary" style="top: 445px; left: 750px;">
-                                <span class="hierarchy-name">4 Предел</span>
-                            </div>
+    <div class="hierarchy-nodes-absolute" style="height: 820px;">
+        <div class="hierarchy-node hierarchy-node--primary" style="top: 10px; left: 450px;">
+            <span class="hierarchy-name">Прародитель</span>
+            <span class="hierarchy-sub">Мудзан Кибуцуджи</span>
+        </div>
 
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 90px;">Яхаба</div>
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 270px;">Лунный мечник</div>
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 450px;">Зам. Ком.</div>
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 630px;">3 Предел</div>
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 810px;">Сусамару</div>
+        <div class="hierarchy-node hierarchy-node--secondary" style="top: 140px; left: 300px;">
+            <span class="hierarchy-name">Высшие Луны</span>
+            <span class="hierarchy-sub">Верхняя Шестёрка</span>
+        </div>
+        <div class="hierarchy-node hierarchy-node--secondary" style="top: 140px; left: 600px;">
+            <span class="hierarchy-name">Низшие Луны</span>
+            <span class="hierarchy-sub">Нижняя Шестёрка</span>
+        </div>
 
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 645px; left: 225px;">Лунный Аколит</div>
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 645px; left: 450px;">Высшая Магия</div>
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 645px; left: 675px;">2 Предел</div>
+        <div class="hierarchy-node hierarchy-node--tertiary" style="top: 245px; left: 450px;">
+            <span class="hierarchy-name">Кровавая Элита</span>
+        </div>
 
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 745px; left: 300px;">Низшая Магия</div>
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 745px; left: 600px;">1 Предел</div>
+        <div class="hierarchy-node hierarchy-node--quaternary" style="top: 335px; left: 220px;">
+            <span class="hierarchy-name">CMD</span>
+            <span class="hierarchy-sub">Лунный Сенсей</span>
+        </div>
+        <div class="hierarchy-node hierarchy-node--quaternary" style="top: 345px; left: 450px;">
+            <span class="hierarchy-name">Константы</span>
+        </div>
+        <div class="hierarchy-node hierarchy-node--quaternary" style="top: 345px; left: 680px;">
+            <span class="hierarchy-name">5 Предел</span>
+        </div>
 
-                            <div class="hierarchy-node hierarchy-node--leaf" style="top: 825px; left: 450px;">Демоны 12 рангов</div>
-                        </div>
-                    </div>
+        <div class="hierarchy-node hierarchy-node--quaternary" style="top: 435px; left: 220px;">
+            <span class="hierarchy-name">D.CMD</span>
+            <span class="hierarchy-sub">Лунный Сенсей</span>
+        </div>
+        <div class="hierarchy-node hierarchy-node--quaternary" style="top: 435px; left: 450px;">
+            <span class="hierarchy-name">CMD</span>
+            <span class="hierarchy-sub">Отрядов</span>
+        </div>
+        <div class="hierarchy-node hierarchy-node--quaternary" style="top: 445px; left: 680px;">
+            <span class="hierarchy-name">4 Предел</span>
+        </div>
 
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 70px;">Яхаба</div>
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 220px;">Лунный мечник</div>
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 450px;">D.CMD</div>
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 680px;">3 Предел</div>
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 545px; left: 830px;">Сусамару</div>
+
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 645px; left: 220px;">Лунный Аколит</div>
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 645px; left: 450px;">Высшая Магия</div>
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 645px; left: 680px;">2 Предел</div>
+
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 745px; left: 450px;">Низшая Магия</div>
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 745px; left: 680px;">1 Предел</div>
+
+        <div class="hierarchy-node hierarchy-node--leaf" style="top: 825px; left: 450px;">Демоны 12 рангов</div>
+    </div>
+</div>
                     <div class="blood-anchor-divider"></div>
 
-                    <div class="section-title" style="margin-top: var(--space-2xl);">Оглавление</div>
+                    <div class="section-title blood-main-title" style="margin-top: var(--space-2xl);">Оглавление</div>
                     <div class="blood-sections-nav" id="bloodSectionsNav">
                         <button class="blood-nav-btn" type="button" data-target="blood-general"><i class="fas fa-scroll"></i><span>Общие положения</span></button>
                         <button class="blood-nav-btn" type="button" data-target="blood-dojo"><i class="fas fa-torii-gate"></i><span>Правила додзё</span></button>
@@ -496,7 +510,7 @@
                 <section class="blood-section" id="blood-events">
                     <div class="blood-section-head">
                         <h3 class="blood-section-title"><i class="fas fa-users"></i>Правила мероприятий и построений</h3>
-                        <div class="blood-section-badge">В навигации: «Правила мероприятий»</div>
+                        <div class="blood-section-badge">Правила мероприятий</div>
                     </div>
                     <div class="blood-text-list">
                         <div class="blood-rule"><p><strong>1)</strong> Между окончанием и началом мероприятий должно пройти не менее 15 минут. Луны могут иногда игнорировать этот пункт, при этом злоупотребление этим правом будет караться.</p></div>
@@ -548,7 +562,7 @@
                     <div class="punishment-tabs" id="punishmentTabs"></div>
                     <div class="punishment-pane" id="punishmentPane"></div>
 
-                    <div class="section-title" style="margin-top:24px;">Правила выдачи наказаний</div>
+                    <div class="section-title blood-main-title" style="margin-top:24px;">Правила выдачи наказаний</div>
                     <div class="blood-text-list">
                         <div class="blood-rule"><p><strong>1)</strong> Мера наказания выбирается самим наказывающим по мере нарушения.</p></div>
                         <div class="blood-rule"><p><strong>2)</strong> Запрещено выдавать больше одного выговора за одну ситуацию, даже если было несколько нарушений.</p></div>
@@ -637,7 +651,7 @@
                         </div>
                         <div class="blood-note"><strong>Примечание:</strong> в случае отсутствия глав/замов перевод может одобрять CMD / D.CMD.</div>
 
-                        <div class="section-title" style="margin-top:20px;">Правила переводов</div>
+                        <div class="section-title blood-main-title" style="margin-top:20px;">Правила переводов</div>
 
                         <div class="blood-rule"><p><strong>1)</strong> После перевода на человека накладывается КД в течение недели.</p></div>
                         <div class="blood-note"><strong>Примечание:</strong> Демоны 12 лун на второй профессии могут перевестись дважды, прежде чем получить КД.</div>
@@ -752,7 +766,6 @@
         'HDS 5': '<ul class="rule-list"><li><span class="rule-number">1</span> Ранг Shiko</li><li><span class="rule-number">2</span> Одобрение Тройки</li><li><span class="rule-number">3</span> HDS 4, поручение</li><li><span class="rule-number">4</span> 25 истребителей, 3 сбора, 2 тренировки</li><li><span class="rule-number">5</span> Почтение 3</li></ul><div class="note">"Высшая Магия Крови"</div><p><span style="background:#dc2626;padding:4px 16px;border-radius:20px;color:white;">КД: 3 дня</span></p>'
     };
 
-
     const punishmentDetails = {
         'Физическое наказание': {
             icon: 'fas fa-dumbbell',
@@ -798,13 +811,11 @@
         }
     };
 
-
     const territoryRules = {
         natagumo: '<h3 style="font-family:var(--font-display);">Гора Натагумо</h3><ul class="rule-list"><li><span class="rule-number">1</span> Не перечить Младшему Брату</li><li><span class="rule-number">2</span> Не трогать ловушки</li><li><span class="rule-number">3</span> Покинуть за 10 сек</li></ul>',
         otrek: '<h3 style="font-family:var(--font-display);">Дом Отрёкшихся</h3><ul class="rule-list"><li><span class="rule-number">1</span> Не перечить членам отряда</li><li><span class="rule-number">2</span> Своя иерархия</li></ul>',
         douma: '<h3 style="font-family:var(--font-display);">Храм Доумы</h3><ul class="rule-list"><li><span class="rule-number">1</span> Приветствует ищущих</li><li><span class="rule-number">2</span> Без маскировки запрещено</li><li><span class="rule-number">3</span> Подчиняться слову</li></ul>'
     };
-
 
     function initBloodSection() {
         const navButtons = document.querySelectorAll('#bloodSectionsNav .blood-nav-btn');
@@ -856,7 +867,6 @@
             });
         }
     }
-
 
     function switchTab(tabId) {
         navLinks.forEach(link => {
